@@ -1,0 +1,283 @@
+.storiesSection {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.magicalStories {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.panelTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.closeButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #EAF1FF;
+  color: #4F7DFF;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  background: #7FA7FF;
+  transform: rotate(90deg);
+}
+
+.searchBox {
+  background: #F9FAFC;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.searchIcon {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-size: 15px;
+  color: #9CA3AF;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: #9CA3AF;
+}
+
+.iconGrid {
+  background: linear-gradient(135deg, #4F7DFF 0%, #7FA7FF 100%);
+  border-radius: 20px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.iconButton {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.iconButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.rightPanel {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rightPanel .searchBox {
+  position: relative;
+}
+
+.shuffleButton {
+  background: #4F7DFF;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.shuffleButton:hover {
+  background: #7FA7FF;
+  transform: rotate(180deg);
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.eventCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventImage {
+  border-radius: 20px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eventImageContent {
+  font-size: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.braveKnights {
+  background: linear-gradient(135deg, #F4A261 0%, #FFD3A5 100%);
+}
+
+.spaceAdventures {
+  background: linear-gradient(135deg, #4F7DFF 0%, #7FA7FF 100%);
+}
+
+.spaceAdventuresFeatured {
+  background: linear-gradient(135deg, #4F7DFF 0%, #7FA7FF 100%);
+}
+
+.eventTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.eventDescription {
+  font-size: 14px;
+  color: #9CA3AF;
+  line-height: 1.5;
+}
+
+.featuredCard {
+  grid-column: 1 / -1;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.featuredCard .eventImage {
+  margin-bottom: 0;
+  height: 150px;
+}
+
+.featuredInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.featuredTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.featuredDescription {
+  font-size: 15px;
+  color: #9CA3AF;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.featuredFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coinsBadge {
+  background: #FFF1E3;
+  padding: 8px 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coinIcon {
+  font-size: 20px;
+}
+
+.coinAmount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.joinButton {
+  background: #4F7DFF;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.joinButton:hover {
+  background: #7FA7FF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 125, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .storiesSection {
+    grid-template-columns: 1fr;
+  }
+  
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featuredCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .iconGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
