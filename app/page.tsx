@@ -21,7 +21,7 @@ export default function Page() {
                     <div className="logo-icon">
                         <span role="img" aria-label="logo">👣</span> {/* Placeholder for footprint logo */}
                     </div>
-                    <span>Grandpa's Hug</span>
+                    <span>Hi! Kenjiro</span>
                 </div>
 
                 <nav className="nav">
