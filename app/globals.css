@@ -863,6 +863,74 @@ body {
   line-height: 1.4;
 }
 
+/* Memory Snaps Styles */
+.snaps-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.snaps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.snaps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.snap-card {
+  background: white;
+  padding: 10px 10px 40px 10px;
+  /* Polaroid bottom padding */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.snap-card:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.snap-card:hover {
+  transform: rotate(0) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.snap-image-container {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f0f0f0;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+}
+
+.snap-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.snap-caption {
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  /* Fallback to sans-serif if custom font not loaded */
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+
 .event-footer {
   display: flex;
   justify-content: space-between;
