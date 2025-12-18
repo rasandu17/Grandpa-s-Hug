@@ -104,36 +104,15 @@ export default function Page() {
 
                 {/* Lower Grid */}
                 <div className="lower-section">
-                    {/* Card: Mood Check-in (Replaces Magical Stories) */}
-                    <div className="card-container mood-checkin">
-                        <div className="card-title-row">
-                            <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                <h3 className="section-title">How is your heart?</h3>
-                                <span style={{ fontSize: '0.9rem', color: '#7f8c8d' }}>Tell Grandpa, I'm listening.</span>
-                            </div>
-                            <button className="close-btn">x</button>
-                        </div>
-
-                        <div className="mood-grid">
-                            <button className="mood-btn mood-btn-happy">
-                                <span className="mood-emoji">☀️</span>
-                                <span>Happy</span>
-                            </button>
-                            <button className="mood-btn mood-btn-sad">
-                                <span className="mood-emoji">🌧️</span>
-                                <span>Sad</span>
-                            </button>
-                            <button className="mood-btn mood-btn-angry">
-                                <span className="mood-emoji">🔥</span>
-                                <span>Mad</span>
-                            </button>
-                            <button className="mood-btn mood-btn-scared">
-                                <span className="mood-emoji">💨</span>
-                                <span>Scared</span>
+                    {/* Card: Grandpa's Daily Note (Replaces Mood Check-in) */}
+                    <div className="card-container" style={{ background: 'transparent', padding: 0, boxShadow: 'none' }}>
+                        <div className="daily-note-card">
+                            <div className="note-pin"></div>
+                            <h3 className="note-title">"Did anyone make you smile today?"</h3>
+                            <button className="note-action-btn" onClick={() => setShowChat(true)}>
+                                <span style={{ fontSize: '1.2rem' }}>✏️</span> Tell Grandpa
                             </button>
                         </div>
-
-                        <p className="mood-subtext">Picking a feeling helps me find the perfect story for you!</p>
                     </div>
 
                     {/* Memory Snaps Section (Replaces Search Events) */}

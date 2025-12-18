@@ -863,6 +863,418 @@ body {
   line-height: 1.4;
 }
 
+/* Chat Sidebar Styles */
+.chat-container-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chat-sidebar {
+  width: 260px;
+  background: #f7fafc;
+  border-right: 1px solid #edf2f7;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: width 0.3s ease;
+}
+
+.chat-sidebar.closed {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.chat-main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+}
+
+.new-chat-btn {
+  background: white;
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.new-chat-btn:hover {
+  background: #edf2f7;
+}
+
+.sidebar-section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.sidebar-section-label:first-child {
+  margin-top: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #4a5568;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.sidebar-item:hover {
+  background: #edf2f7;
+}
+
+.sidebar-item.active {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-menu-btn {
+  display: none;
+  /* Hidden by default on desktop if you want, or visible to toggle */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #4a5568;
+}
+
+/* Adjust overlay to not have padding per se if we want full bleed */
+.chat-overlay {
+  /* Ensure it has no padding internally interfering with full height sidebar */
+  overflow: hidden;
+  /* Prevent double scrollbars */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grandpa's Daily Note Styles */
+.daily-note-card {
+  background: #FEF9C3;
+  /* Light yellow paper */
+  background-image: radial-gradient(#f0f0f0 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-radius: 2px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: rotate(-1deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.note-pin {
+  width: 16px;
+  height: 16px;
+  background: #EF4444;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.note-pin::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.note-title {
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  font-size: 1.8rem;
+  color: #4B5563;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.note-action-btn {
+  background: #4B5563;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.note-action-btn:hover {
+  transform: scale(1.05);
+  background: #374151;
+}
+
+/* Memory Snaps Styles */
+.snaps-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.snaps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.snaps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.snap-card {
+  background: white;
+  padding: 10px 10px 40px 10px;
+  /* Polaroid bottom padding */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.snap-card:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.snap-card:hover {
+  transform: rotate(0) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+/* Chat Sidebar Styles */
+.chat-container-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chat-sidebar {
+  width: 260px;
+  background: #f7fafc;
+  border-right: 1px solid #edf2f7;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: width 0.3s ease;
+}
+
+.chat-sidebar.closed {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.chat-main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+}
+
+.new-chat-btn {
+  background: white;
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.new-chat-btn:hover {
+  background: #edf2f7;
+}
+
+.sidebar-section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.sidebar-section-label:first-child {
+  margin-top: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #4a5568;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.sidebar-item:hover {
+  background: #edf2f7;
+}
+
+.sidebar-item.active {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-menu-btn {
+  display: none;
+  /* Hidden by default on desktop if you want, or visible to toggle */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #4a5568;
+}
+
+/* Adjust overlay to not have padding per se if we want full bleed */
+.chat-overlay {
+  /* Ensure it has no padding internally interfering with full height sidebar */
+  overflow: hidden;
+  /* Prevent double scrollbars */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grandpa's Daily Note Styles */
+.daily-note-card {
+  background: #FEF9C3;
+  /* Light yellow paper */
+  background-image: radial-gradient(#f0f0f0 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-radius: 2px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: rotate(-1deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.note-pin {
+  width: 16px;
+  height: 16px;
+  background: #EF4444;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.note-pin::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.note-title {
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  font-size: 1.8rem;
+  color: #4B5563;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.note-action-btn {
+  background: #4B5563;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.note-action-btn:hover {
+  transform: scale(1.05);
+  background: #374151;
+}
+
 /* Memory Snaps Styles */
 .snaps-section {
   display: flex;
