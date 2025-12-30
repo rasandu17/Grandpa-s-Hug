@@ -1,19 +1,22 @@
 "use client";
 
 import Image from 'next/image'
-import { Home, Trophy, Crosshair, User, MessageCircle, BookOpen, Settings, Search, Download, Box, PlusCircle, Filter } from 'lucide-react'
+import { Home, Trophy, Crosshair, User, MessageCircle, BookOpen, Settings, Search, Download, Box, PlusCircle, Filter, Heart } from 'lucide-react'
 import { useState } from 'react'
 import VoiceCompanion from './components/VoiceCompanion'
 import ChatCompanion from './components/ChatCompanion'
+import ProfileOverlay from './components/ProfileOverlay'
 
 export default function Page() {
     const [showVoice, setShowVoice] = useState(false);
     const [showChat, setShowChat] = useState(false);
+    const [showProfile, setShowProfile] = useState(false);
 
     return (
         <>
             {showVoice && <VoiceCompanion onClose={() => setShowVoice(false)} />}
             {showChat && <ChatCompanion onClose={() => setShowChat(false)} />}
+            {showProfile && <ProfileOverlay onClose={() => setShowProfile(false)} />}
 
             {/* Header */}
             <header className="header">
@@ -21,25 +24,14 @@ export default function Page() {
                     <div className="logo-icon">
                         <span role="img" aria-label="logo">👣</span> {/* Placeholder for footprint logo */}
                     </div>
-                    <span>Hi! Kenjiro</span>
+                    <span>Grandpa's Hug</span>
                 </div>
 
-                <nav className="nav">
-                    <a href="#" className="nav-item active">
-                        <Home size={18} />
-                        Home
-                    </a>
-                    <a href="#" className="nav-item">
-                        <Trophy size={18} /> {/* Using trophy for scores */}
-                        Scores
-                    </a>
-                    <a href="#" className="nav-item">
-                        <Crosshair size={18} />
-                        Chase
-                    </a>
-                </nav>
+                <div className="header-greeting">
+                    Hi, Kenjiro! 👋
+                </div>
 
-                <div className="user-profile">
+                <div className="user-profile" onClick={() => setShowProfile(true)} style={{ cursor: 'pointer' }}>
                     <div className="user-pill">
                         <Image
                             src="/assets/avatar.png"
