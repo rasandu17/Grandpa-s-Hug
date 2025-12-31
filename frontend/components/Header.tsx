@@ -9,27 +9,9 @@ export default function Header() {
       </div>
       
       <nav className={styles.nav}>
-        <a href="#" className={styles.navItem}>
-          <span className={styles.navIcon}>🏠</span>
-          <span>Home</span>
-        </a>
-        <a href="#" className={styles.navItem}>
-          <span className={styles.navIcon}>📊</span>
-          <span>Scores</span>
-        </a>
-        <a href="#" className={styles.navItem}>
-          <span className={styles.navIcon}>✓</span>
-          <span>Chase</span>
-        </a>
-        <a href="#" className={styles.navItem}>
-          <div className={styles.avatar}>
-            <span>👤</span>
-          </div>
-          <span>Kenjiro</span>
-        </a>
-        <button className={styles.themeToggle}>
-          🌙
-        </button>
+        <div className={styles.greeting}>
+          hi username
+        </div>
       </nav>
     </header>
   )

@@ -42,10 +42,18 @@ body {
 /* Header */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1.5rem 2.5rem;
   background: #fff;
+}
+
+.greeting-text {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4A90E2;
+  text-align: center;
 }
 
 .logo {

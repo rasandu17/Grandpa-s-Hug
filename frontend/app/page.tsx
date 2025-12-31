@@ -17,42 +17,8 @@ export default function Page() {
 
             {/* Header */}
             <header className="header">
-                <div className="logo">
-                    <div className="logo-icon">
-                        <span role="img" aria-label="logo">👣</span> {/* Placeholder for footprint logo */}
-                    </div>
-                    <span>Hi! Kenjiro</span>
-                </div>
-
-                <nav className="nav">
-                    <a href="#" className="nav-item active">
-                        <Home size={18} />
-                        Home
-                    </a>
-                    <a href="#" className="nav-item">
-                        <Trophy size={18} /> {/* Using trophy for scores */}
-                        Scores
-                    </a>
-                    <a href="#" className="nav-item">
-                        <Crosshair size={18} />
-                        Chase
-                    </a>
-                </nav>
-
-                <div className="user-profile">
-                    <div className="user-pill">
-                        <Image
-                            src="/assets/avatar.png"
-                            alt="Kenjiro"
-                            width={24}
-                            height={24}
-                            className="avatar"
-                        />
-                        <span className="user-name">Kenjiro</span>
-                    </div>
-                    <div className="coin-pill">
-                        3
-                    </div>
+                <div className="greeting-text">
+                    hi username
                 </div>
             </header>
 
