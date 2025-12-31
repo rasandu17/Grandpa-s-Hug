@@ -5,21 +5,25 @@ A warm and friendly web application recreated from the design mockup, built with
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ installed on your system
 - npm or yarn package manager
 
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. **Important**: Add the grandpa image
+
    - Save the grandpa character image as `grandpa.png` in the `public` folder
    - The image should be at: `public/grandpa.png`
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -75,17 +79,22 @@ npm start
 ## 🎯 Components Overview
 
 ### Header
+
 Navigation bar with logo, menu items, and theme toggle.
 
 ### HeroSection
+
 Main feature section with:
+
 - Welcome message
 - Grandpa character image
 - Character selection card
 - Interactive buttons
 
 ### StoriesSection
+
 Content area featuring:
+
 - Magical Stories panel with search and icons
 - Event cards (Brave Knights, Space Adventures)
 - Featured story card with coin rewards
@@ -100,6 +109,7 @@ Content area featuring:
 ## 📝 Customization
 
 To customize the application:
+
 1. Edit component files in the `components/` folder
 2. Modify styles in the corresponding `.module.css` files
 3. Update global styles in `app/globals.css`
@@ -112,3 +122,21 @@ Feel free to fork this project and make your own modifications!
 ## 📄 License
 
 This project is open source and available under the MIT License.
+
+## Connect frontend to backend
+
+This frontend calls your FastAPI endpoint `POST /chat-audio` using `multipart/form-data` and plays back the returned `audio/mpeg`.
+
+1. Create `frontend/.env.local` (or copy from `.env.local.example`) and set:
+
+- `NEXT_PUBLIC_BACKEND_URL=http://127.0.0.1:8000`
+
+2. Start your Python backend (example):
+
+- `uvicorn main:app --host 127.0.0.1 --port 8000 --reload`
+
+3. Start the Next.js dev server:
+
+- `npm run dev`
+
+Then open the app and use the **Ask Grandpa** voice button.
