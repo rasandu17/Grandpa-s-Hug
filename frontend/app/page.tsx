@@ -18,7 +18,7 @@ export default function Page() {
             {/* Header */}
             <header className="header">
                 <div className="greeting-text">
-                    hi username
+                    Hi Kiddoo!
                 </div>
             </header>
 
@@ -43,25 +43,14 @@ export default function Page() {
                     </div>
 
                     <div className="hero-right">
-                        <h2 className="voice-title" style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1rem', width: '100%', textAlign: 'center' }}>Hand-pick Your<br />Character</h2>
-
-                        <div className="character-picker">
-                            <Image src="/assets/grandpa.png" alt="Icon" width={30} height={30} className="picker-avatar" style={{ backgroundColor: '#eee' }} />
-                            <input type="text" className="picker-input" placeholder="Grandpa's Hug" disabled />
-                        </div>
+                        <h2 className="voice-title" style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1rem', width: '100%', textAlign: 'center' }}>Talk with grandpa</h2>
 
                         <div className="voice-actions">
                             <p className="voice-title">Hello, little one! What shall you talk today?</p>
                             <div className="voice-buttons">
-                                <button className="btn-action-icon btn-book">
-                                    <BookOpen size={28} />
-                                </button>
                                 <button className="btn-advice" onClick={() => setShowVoice(true)}>
                                     <span>Ask</span>
                                     <span>Grandpa</span>
-                                </button>
-                                <button className="btn-action-icon btn-chat" onClick={() => setShowChat(true)}>
-                                    <MessageCircle size={28} />
                                 </button>
                             </div>
                         </div>
@@ -75,7 +64,7 @@ export default function Page() {
                         <div className="daily-note-card">
                             <div className="note-pin"></div>
                             <h3 className="note-title">"Did anyone make you smile today?"</h3>
-                            <button className="note-action-btn" onClick={() => setShowChat(true)}>
+                            <button className="note-action-btn" onClick={() => setShowVoice(true)}>
                                 <span style={{ fontSize: '1.2rem' }}>✏️</span> Tell Grandpa
                             </button>
                         </div>

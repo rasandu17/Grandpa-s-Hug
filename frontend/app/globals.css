@@ -24,7 +24,7 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
-  background: #ffffff;
+  background: #E0F0FF;
   min-height: 100vh;
   color: var(--text-dark);
   display: flex;
@@ -34,7 +34,7 @@ body {
 .app-container {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: #E0F0FF;
   display: flex;
   flex-direction: column;
 }
@@ -45,7 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1.5rem 2.5rem;
-  background: #fff;
+  background: transparent;
 }
 
 .greeting-text {
@@ -339,7 +339,7 @@ body {
 .btn-advice {
   background: #F5A623;
   color: white;
-  padding: 0.6rem 2rem;
+  padding: 0.6rem 4rem;
   /* Smaller padding */
   border-radius: 50px;
   font-weight: 700;
@@ -1475,4 +1475,195 @@ body {
   padding-top: 1rem;
   font-weight: 500;
   line-height: 1.4;
+}
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .greeting-text {
+    font-size: 1.5rem;
+  }
+
+  /* Dashboard Content */
+  .dashboard-content {
+    padding: 0 1rem 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    flex-direction: column;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-left {
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .btn-primary {
+    align-self: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+
+  .hero-center {
+    flex: 0 0 250px;
+    margin: 2rem 0;
+  }
+
+  .hero-grandpa {
+    width: 120%;
+  }
+
+  .hero-right {
+    padding: 0;
+    width: 100%;
+  }
+
+  .voice-title {
+    font-size: 0.9rem;
+  }
+
+  .voice-actions {
+    padding: 1.5rem 1rem;
+  }
+
+  .btn-advice {
+    padding: 0.5rem 3rem;
+    font-size: 0.9rem;
+  }
+
+  /* Lower Section */
+  .lower-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Daily Note Card */
+  .daily-note-card {
+    padding: 1.5rem;
+  }
+
+  .note-title {
+    font-size: 1.1rem;
+  }
+
+  .note-action-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Snaps Section */
+  .snaps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .snap-card {
+    height: 120px;
+  }
+
+  /* Stories Section */
+  .stories-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Card Container */
+  .card-container {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  /* Activities Grid */
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mood Grid */
+  .mood-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Overlay Panels */
+  .voice-overlay {
+    padding: 1rem;
+  }
+
+  .voice-panel {
+    max-width: 95%;
+    padding: 2rem 1.5rem;
+  }
+
+  .voice-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .wave {
+    width: 3px;
+  }
+
+  /* Navigation if exists */
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav-item {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-center {
+    flex: 0 0 200px;
+  }
+
+  .btn-advice {
+    padding: 0.5rem 2.5rem;
+    font-size: 0.85rem;
+  }
+
+  .voice-panel {
+    padding: 1.5rem 1rem;
+  }
+
+  .snaps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snap-card {
+    height: 150px;
+  }
+
+  .dashboard-content {
+    padding: 0 0.75rem 1rem 0.75rem;
+  }
 }

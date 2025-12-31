@@ -61,19 +61,11 @@ export default function VoiceCompanion({ onClose }: VoiceCompanionProps) {
 
             {/* Controls */}
             <div className="voice-controls">
-                <button className="voice-btn-small">
-                    <MoreHorizontal size={24} />
-                </button>
-
                 <button
                     className={`voice-mic-btn ${isListening ? 'active' : 'inactive'}`}
                     onClick={() => setIsListening(!isListening)}
                 >
                     <Mic size={40} />
-                </button>
-
-                <button className="voice-btn-small">
-                    <span style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>keyboard</span>
                 </button>
             </div>
         </div>

@@ -34,7 +34,7 @@ export default function HeroSection() {
 
         <div className={styles.heroRight}>
           <div className={styles.characterCard}>
-            <h3 className={styles.cardTitle}>Hand-pick Your Character</h3>
+            <h3 className={styles.cardTitle}>Talk with grandpa</h3>
             
             <div className={styles.characterOption}>
               <span className={styles.characterEmoji}>👴</span>

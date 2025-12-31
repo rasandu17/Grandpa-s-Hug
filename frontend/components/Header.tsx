@@ -10,7 +10,7 @@ export default function Header() {
       
       <nav className={styles.nav}>
         <div className={styles.greeting}>
-          hi username
+          Hi Kiddoo!
         </div>
       </nav>
     </header>
