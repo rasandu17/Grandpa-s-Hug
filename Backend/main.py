@@ -5,7 +5,7 @@ from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 from dotenv import load_dotenv
-import google.generativeai as genai  # OLD SDK - WORKS!
+import google.generativeai as genai  
 from elevenlabs.client import ElevenLabs
 import speech_recognition as sr
 from pydub import AudioSegment
@@ -62,7 +62,6 @@ SELECTED_GEMINI_MODEL = _pick_gemini_model()
 print(f"🤖 Using Gemini model: {SELECTED_GEMINI_MODEL}")
 model = genai.GenerativeModel(SELECTED_GEMINI_MODEL)
 
-# ElevenLabs Client
 elevenlabs_client = ElevenLabs(api_key=ELEVENLABS_API_KEY)
 
 
@@ -114,7 +113,7 @@ app.add_middleware(
 conversation_history = []
 
 SYSTEM_PROMPT = """
-You are a kind, wise, and gentle grandfather named 'Grandpa Gem'. 
+You are a kind, wise, and gentle grandfather named 'Grandpa'. 
 You are talking to a young child who needs emotional support and guidance.
 Your goal is to help them with their problems through empathy, warmth, and short comforting stories.
 
@@ -253,4 +252,6 @@ def reset_conversation():
     return {"status": "Conversation reset successfully"}
 
 
-# Run: uvicorn main:app --reload --host 0.0.0.0 --port 8000
+@app.get("/conversation-history")
+def get_conversation_history():
+    return conversation_history

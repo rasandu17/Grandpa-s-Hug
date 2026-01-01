@@ -2,9 +2,8 @@ fastapi
 uvicorn
 pydantic
 python-dotenv
-google-genai
+google-generativeai
 elevenlabs
 python-multipart
 SpeechRecognition
 pydub
-requests
